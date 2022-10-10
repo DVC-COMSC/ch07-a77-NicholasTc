@@ -9,12 +9,21 @@ num3 = []
 
 
 index = 0
+longer_arr = []
+shorter_arr = []
+if len(num1) > len(num2):
+    longer_arr = num1
+    shorter_arr = num2
+else:
+    longer_arr = num2
+    shorter_arr = num1
+
 while True:
-    if index <= len(num1) - 1:
-        num3.append(num1[index])
-        num3.append(num2[index])
-    elif index > len(num1) - 1 and index <= len(num2) - 1:
-        num3.append(num2[index])
+    if index <= len(shorter_arr) - 1:
+        num3.append(shorter_arr[index])
+        num3.append(longer_arr[index])
+    elif index > len(shorter_arr) - 1 and index <= len(longer_arr) - 1:
+        num3.append(longer_arr[index])
     else:
         break
 
